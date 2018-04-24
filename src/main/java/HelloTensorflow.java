@@ -27,10 +27,10 @@ public class HelloTensorflow {
 
 	 public static void simpleSum () {
 		  try (Graph g = new Graph()) {
-		  		GraphBuilder builder = new GraphBuilder(g);
+				GraphBuilder builder = new GraphBuilder(g);
 
-		  		Output<Integer> out = builder.add(
-		  			builder.constant("A", 2),
+				Output<Integer> out = builder.add(
+					builder.constant("A", 2),
 					builder.constant("B", 3));
 
 				try (Session s = new Session(g);
