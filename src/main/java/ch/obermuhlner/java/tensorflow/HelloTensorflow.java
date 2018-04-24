@@ -1,3 +1,5 @@
+package ch.obermuhlner.java.tensorflow;
+
 import org.tensorflow.*;
 
 public class HelloTensorflow {

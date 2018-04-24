@@ -1,3 +1,6 @@
+package ch.obermuhlner.java.tensorflow;
+
+import ch.obermuhlner.java.tensorflow.GraphBuilder;
 import org.junit.Test;
 import org.tensorflow.Graph;
 import org.tensorflow.Output;
