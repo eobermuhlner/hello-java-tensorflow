@@ -17,6 +17,26 @@ public class GraphBuilderTest {
 		assertGraphBuilder(2, g -> g.constant("A", 2));
 	}
 
+	@Test
+	public void testAdd () {
+		assertGraphBuilder(5, g -> g.add(g.constant("A", 2), g.constant("B", 3)));
+	}
+
+	@Test
+	public void testSub () {
+		assertGraphBuilder(2, g -> g.sub(g.constant("A", 5), g.constant("B", 3)));
+	}
+
+	@Test
+	public void testMul () {
+		assertGraphBuilder(6, g -> g.mul(g.constant("A", 2), g.constant("B", 3)));
+	}
+
+	@Test
+	public void testDiv () {
+		assertGraphBuilder(2, g -> g.div(g.constant("A", 6), g.constant("B", 3)));
+	}
+
 	private <T> void assertGraphBuilder(T expected, Function<GraphBuilder, Output<T>> graphBuilderFunction) {
 		try (Graph g = new Graph()) {
 			GraphBuilder builder = new GraphBuilder(g);
